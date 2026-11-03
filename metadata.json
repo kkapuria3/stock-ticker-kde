@@ -1,0 +1,25 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Karan Kapuria"
+            }
+        ],
+        "Category": "Information",
+        "Description": "Monitor real-time stock prices, crypto, and market indices directly on your KDE Plasma panel",
+        "Icon": "org.kde.plasma.stockticker",
+        "Id": "org.kde.plasma.stockticker",
+        "Name": "Stock Ticker",
+        "Version": "1.0.0",
+        "Website": "https://github.com/kkapuria3/stock-ticker-kde"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-Provides": [
+        "org.kde.plasma.core"
+    ],
+    "X-Plasma-FormFactors": [
+        "horizontal",
+        "vertical"
+    ]
+}
