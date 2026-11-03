@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- Physical Board Bezel Gradient -->
+    <linearGradient id="bezelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#121418"/>
+      <stop offset="100%" stop-color="#121418"/>
+    </linearGradient>
+
+    <!-- Display Board Inner Area Gradient -->
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c10"/>
+      <stop offset="100%" stop-color="#040507"/>
+    </linearGradient>
+
+    <!-- LED Dot Matrix Grid Texture -->
+    <pattern id="dotGrid" width="2" height="2" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.32" fill="#14171d"/>
+    </pattern>
+
+    <!-- Green LED Dot Template (Clean, non-blurry, perfectly scalable) -->
+    <g id="gDot">
+      <circle cx="0" cy="0" r="0.9" fill="#00ff66"/>
+      <circle cx="0" cy="0" r="0.45" fill="#e0ffe8"/>
+    </g>
+
+    <!-- Red LED Dot Template -->
+    <g id="rDot">
+      <circle cx="0" cy="0" r="0.9" fill="#ff3344"/>
+      <circle cx="0" cy="0" r="0.45" fill="#ffebee"/>
+    </g>
+  </defs>
+
+  <!-- 1. Physical Electronic Board Outer Bezel -->
+  <rect x="2" y="2" width="60" height="60" rx="12" ry="12" fill="url(#bezelGrad)" stroke="#383e4a" stroke-width="1.8"/>
+
+  <!-- 2. Screen Surface (strictly inset: x=5 to 59, y=5 to 59, width=54, height=54) -->
+  <rect x="5" y="5" width="54" height="54" rx="8" ry="8" fill="url(#screenGrad)"/>
+
+  <!-- 3. LED Matrix Texture -->
+  <rect x="5" y="5" width="54" height="54" rx="8" ry="8" fill="url(#dotGrid)"/>
+
+  <!-- 4. Subtle Top Glass Highlight (Contained within screen) -->
+  <path d="M 6 14 C 6 8.5 9.5 6 15 6 L 49 6 C 54.5 6 58 8.5 58 14 L 58 16 L 6 16 Z" fill="#ffffff" fill-opacity="0.04"/>
+
+  <!-- ========================================================================= -->
+  <!-- ROW 1 (y: 8 to 15): TOP MINI TICKER TAPE                                 -->
+  <!-- Green Index: QQQ +1.4%  |  Red Stock: TSLA -0.8%                          -->
+  <!-- ========================================================================= -->
+  <text x="12" y="14"
+        fill="#00e676"
+        font-family="'SF Mono', 'DejaVu Sans Mono', 'Courier New', monospace"
+        font-size="5.4"
+        font-weight="bold"
+        letter-spacing="0.2">STOCK TICKER</text>
+
+
+  <!-- ========================================================================= -->
+  <!-- ROW 2 (y: 19 to 29): MAIN LARGE LED TICKER - AAPL 234                     -->
+  <!-- Fits cleanly between x=8 and x=56 (Total width = 48px, perfectly centered)-->
+  <!-- ========================================================================= -->
+  <!-- 'A' (x: 8.5 to 13.5) -->
+  <use href="#gDot" x="11" y="19.5"/>
+  <use href="#gDot" x="9.5" y="21.7"/><use href="#gDot" x="12.5" y="21.7"/>
+  <use href="#gDot" x="8.5" y="24.0"/><use href="#gDot" x="11" y="24.0"/><use href="#gDot" x="13.5" y="24.0"/>
+  <use href="#gDot" x="8.5" y="26.3"/><use href="#gDot" x="13.5" y="26.3"/>
+  <use href="#gDot" x="8.5" y="28.5"/><use href="#gDot" x="13.5" y="28.5"/>
+
+  <!-- 'A' (x: 16 to 21) -->
+  <use href="#gDot" x="18.5" y="19.5"/>
+  <use href="#gDot" x="17" y="21.7"/><use href="#gDot" x="20" y="21.7"/>
+  <use href="#gDot" x="16" y="24.0"/><use href="#gDot" x="18.5" y="24.0"/><use href="#gDot" x="21" y="24.0"/>
+  <use href="#gDot" x="16" y="26.3"/><use href="#gDot" x="21" y="26.3"/>
+  <use href="#gDot" x="16" y="28.5"/><use href="#gDot" x="21" y="28.5"/>
+
+  <!-- 'P' (x: 23.5 to 28) -->
+  <use href="#gDot" x="23.5" y="19.5"/><use href="#gDot" x="25.7" y="19.5"/><use href="#gDot" x="28" y="19.5"/>
+  <use href="#gDot" x="23.5" y="21.7"/><use href="#gDot" x="28" y="21.7"/>
+  <use href="#gDot" x="23.5" y="24.0"/><use href="#gDot" x="25.7" y="24.0"/><use href="#gDot" x="28" y="24.0"/>
+  <use href="#gDot" x="23.5" y="26.3"/>
+  <use href="#gDot" x="23.5" y="28.5"/>
+
+  <!-- 'L' (x: 30.5 to 34.5) -->
+  <use href="#gDot" x="30.5" y="19.5"/>
+  <use href="#gDot" x="30.5" y="21.7"/>
+  <use href="#gDot" x="30.5" y="24.0"/>
+  <use href="#gDot" x="30.5" y="26.3"/>
+  <use href="#gDot" x="30.5" y="28.5"/><use href="#gDot" x="32.5" y="28.5"/><use href="#gDot" x="34.5" y="28.5"/>
+
+  <!-- '2' (x: 39 to 43.5) -->
+  <use href="#gDot" x="39" y="19.5"/><use href="#gDot" x="41.2" y="19.5"/><use href="#gDot" x="43.5" y="19.5"/>
+  <use href="#gDot" x="43.5" y="21.7"/>
+  <use href="#gDot" x="39" y="24.0"/><use href="#gDot" x="41.2" y="24.0"/><use href="#gDot" x="43.5" y="24.0"/>
+  <use href="#gDot" x="39" y="26.3"/>
+  <use href="#gDot" x="39" y="28.5"/><use href="#gDot" x="41.2" y="28.5"/><use href="#gDot" x="43.5" y="28.5"/>
+
+  <!-- '3' (x: 46 to 50.5) -->
+  <use href="#gDot" x="46" y="19.5"/><use href="#gDot" x="48.2" y="19.5"/><use href="#gDot" x="50.5" y="19.5"/>
+  <use href="#gDot" x="50.5" y="21.7"/>
+  <use href="#gDot" x="47.5" y="24.0"/><use href="#gDot" x="49.5" y="24.0"/>
+  <use href="#gDot" x="50.5" y="26.3"/>
+  <use href="#gDot" x="46" y="28.5"/><use href="#gDot" x="48.2" y="28.5"/><use href="#gDot" x="50.5" y="28.5"/>
+
+  <!-- '4' (x: 52.8 to 56.5) -->
+  <use href="#gDot" x="52.8" y="19.5"/><use href="#gDot" x="56.5" y="19.5"/>
+  <use href="#gDot" x="52.8" y="21.7"/><use href="#gDot" x="56.5" y="21.7"/>
+  <use href="#gDot" x="52.8" y="24.0"/><use href="#gDot" x="54.6" y="24.0"/><use href="#gDot" x="56.5" y="24.0"/>
+  <use href="#gDot" x="56.5" y="26.3"/>
+  <use href="#gDot" x="56.5" y="28.5"/>
+
+  <!-- ========================================================================= -->
+  <!-- ROW 3 (y: 32 to 38): MIDDLE MINI TICKER TAPE                              -->
+  <!-- Green: SPX 5920 +0.6%  |  Red: DOW -0.2%                                  -->
+  <!-- ========================================================================= -->
+  <text x="8" y="36.5"
+        fill="#ff3b30"
+        font-family="'SF Mono', 'DejaVu Sans Mono', 'Courier New', monospace"
+        font-size="5.2"
+        font-weight="bold"
+        letter-spacing="0.2">SPX -0.6%</text>
+
+
+  <!-- ========================================================================= -->
+  <!-- ROW 4 (y: 41 to 51): SECOND LARGE LED TICKER - NVDA 142                   -->
+  <!-- Fits cleanly between x=8 and x=56                                         -->
+  <!-- ========================================================================= -->
+  <!-- 'N' (x: 8.5 to 13.5) -->
+  <use href="#gDot" x="8.5" y="41.5"/><use href="#gDot" x="13.5" y="41.5"/>
+  <use href="#gDot" x="8.5" y="43.7"/><use href="#gDot" x="10" y="43.7"/><use href="#gDot" x="13.5" y="43.7"/>
+  <use href="#gDot" x="8.5" y="46.0"/><use href="#gDot" x="11" y="46.0"/><use href="#gDot" x="13.5" y="46.0"/>
+  <use href="#gDot" x="8.5" y="48.3"/><use href="#gDot" x="12" y="48.3"/><use href="#gDot" x="13.5" y="48.3"/>
+  <use href="#gDot" x="8.5" y="50.5"/><use href="#gDot" x="13.5" y="50.5"/>
+
+  <!-- 'V' (x: 16 to 21) -->
+  <use href="#gDot" x="16" y="41.5"/><use href="#gDot" x="21" y="41.5"/>
+  <use href="#gDot" x="16" y="43.7"/><use href="#gDot" x="21" y="43.7"/>
+  <use href="#gDot" x="16.8" y="46.0"/><use href="#gDot" x="20.2" y="46.0"/>
+  <use href="#gDot" x="17.5" y="48.3"/><use href="#gDot" x="19.5" y="48.3"/>
+  <use href="#gDot" x="18.5" y="50.5"/>
+
+  <!-- 'D' (x: 23.5 to 28) -->
+  <use href="#gDot" x="23.5" y="41.5"/><use href="#gDot" x="25.7" y="41.5"/><use href="#gDot" x="27.5" y="41.5"/>
+  <use href="#gDot" x="23.5" y="43.7"/><use href="#gDot" x="28" y="43.7"/>
+  <use href="#gDot" x="23.5" y="46.0"/><use href="#gDot" x="28" y="46.0"/>
+  <use href="#gDot" x="23.5" y="48.3"/><use href="#gDot" x="28" y="48.3"/>
+  <use href="#gDot" x="23.5" y="50.5"/><use href="#gDot" x="25.7" y="50.5"/><use href="#gDot" x="27.5" y="50.5"/>
+
+  <!-- 'A' (x: 30.5 to 35) -->
+  <use href="#gDot" x="32.8" y="41.5"/>
+  <use href="#gDot" x="31.5" y="43.7"/><use href="#gDot" x="34" y="43.7"/>
+  <use href="#gDot" x="30.5" y="46.0"/><use href="#gDot" x="32.8" y="46.0"/><use href="#gDot" x="35" y="46.0"/>
+  <use href="#gDot" x="30.5" y="48.3"/><use href="#gDot" x="35" y="48.3"/>
+  <use href="#gDot" x="30.5" y="50.5"/><use href="#gDot" x="35" y="50.5"/>
+
+  <!-- '1' (x: 40 to 42) -->
+  <use href="#gDot" x="40.5" y="42.5"/>
+  <use href="#gDot" x="42" y="41.5"/>
+  <use href="#gDot" x="42" y="43.7"/>
+  <use href="#gDot" x="42" y="46.0"/>
+  <use href="#gDot" x="42" y="48.3"/>
+  <use href="#gDot" x="42" y="50.5"/>
+
+  <!-- '4' (x: 45.5 to 49.5) -->
+  <use href="#gDot" x="45.5" y="41.5"/><use href="#gDot" x="49.5" y="41.5"/>
+  <use href="#gDot" x="45.5" y="43.7"/><use href="#gDot" x="49.5" y="43.7"/>
+  <use href="#gDot" x="45.5" y="46.0"/><use href="#gDot" x="47.5" y="46.0"/><use href="#gDot" x="49.5" y="46.0"/>
+  <use href="#gDot" x="49.5" y="48.3"/>
+  <use href="#gDot" x="49.5" y="50.5"/>
+
+  <!-- '2' (x: 52.5 to 56.5) -->
+  <use href="#gDot" x="52.5" y="41.5"/><use href="#gDot" x="54.5" y="41.5"/><use href="#gDot" x="56.5" y="41.5"/>
+  <use href="#gDot" x="56.5" y="43.7"/>
+  <use href="#gDot" x="52.5" y="46.0"/><use href="#gDot" x="54.5" y="46.0"/><use href="#gDot" x="56.5" y="46.0"/>
+  <use href="#gDot" x="52.5" y="48.3"/>
+  <use href="#gDot" x="52.5" y="50.5"/><use href="#gDot" x="54.5" y="50.5"/><use href="#gDot" x="56.5" y="50.5"/>
+
+  <!-- ========================================================================= -->
+  <!-- ROW 5 (y: 53 to 58): BOTTOM MINI TICKER TAPE                              -->
+  <!-- Green: BTC +3.2%  |  Red: MSFT -0.4%                                      -->
+  <!-- ========================================================================= -->
+  <text x="8" y="57"
+        fill="#ff3b30"
+        font-family="'SF Mono', 'DejaVu Sans Mono', 'Courier New', monospace"
+        font-size="5.2"
+        font-weight="bold"
+        letter-spacing="0.2">BTC -3.2%</text>
+
+
+</svg>
